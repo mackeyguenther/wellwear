@@ -585,6 +585,11 @@ footer {
 	article h3 {
 		width:90%;
 	}
+
+	article h3 {
+		line-height: 30px;
+		font-size: 1.1em;
+	}
 }
 
 @media only screen and (max-width: 500px) {
