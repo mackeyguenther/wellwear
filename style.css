@@ -1,19 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i';
-@import 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i';
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+@import  'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i';
+@import  'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i';
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,8 +10,7 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display: block;
 }
 
@@ -32,16 +18,15 @@ body {
 	line-height: 1;
 }
 
-ol, ul {
+ol,ul {
 	list-style: none;
 }
 
-blockquote, q {
+blockquote,q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,blockquote:after,q:before,q:after {
 	content: '';
 	content: none;
 }
@@ -52,57 +37,71 @@ table {
 }
 
 /*End reset */
-
-
-
-
-
 /*MAIN STYLES*/
 header {
 	margin: 0 auto;
-  width: 100%;
+	width: 100%;
 	height: 100px;
 	text-transform: lowercase;
-	background-color: rgba(255, 255, 255, 0.95);
+	background-color: rgba(255,255,255,0.95);
 	position: fixed;
-	top:0;
+	top: 0;
 	z-index: 1;
 }
 
+#mask {
+	position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.9;
+		width: 100%;
+		height: 100px;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+		z-index: -2;
+	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask");
+}
 /*#about h2 {
 	font-family: 'Lora', serif;
 	font-size: 1.5em;
 	text-align: center;
 }*/
-
 nav {
-  float: right;
-  display: inline-block;
+	float: right;
+	display: inline-block;
 	color: #56BCBA;
 }
 
 a {
-  text-decoration: inherit;
-	font-family: 'Lato', sans-serif;
+	text-decoration: inherit;
+	font-family: 'Lato',sans-serif;
 	font-weight: 400;
-  padding-right: 50px;
+	padding-right: 50px;
 	line-height: 100px;
-	color:inherit;
+	color: inherit;
 	font-size: 1.25em;
-  display: inline-block;
-	transition: color 0.25s ease;
+	display: inline-block;
+	transition: color .25s ease;
 }
 
 a:hover {
-  color: #479493;
+	color: #479493;
 }
 
 header img {
 	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 	padding-left: 30px;
-	height:50px;
+	height: 50px;
 	width: 200px;
 	display: inline-block;
 	font-weight: 400;
@@ -110,11 +109,12 @@ header img {
 
 @media only screen and (max-width: 1150px) {
 	article h1 {
-		margin-top:0px;
+		margin-top: 0;
+		text-align: center;
 	}
 
 	body article {
-		overflow:auto;
+		overflow: auto;
 		display: block;
 		height: auto;
 		margin-bottom: 50px;
@@ -125,7 +125,7 @@ header img {
 	}
 
 	body #lives img {
-		display:block;
+		display: block;
 		float: none;
 		margin: 0 auto;
 		top: 0;
@@ -136,12 +136,12 @@ header img {
 		display: block;
 		float: none;
 		max-width: 100%;
-		transform:none;
-		top:0;
+		transform: none;
+		top: 0;
 	}
 
 	body #money img {
-		display:block;
+		display: block;
 		float: none;
 		margin: 0 auto;
 		top: 0;
@@ -152,12 +152,12 @@ header img {
 		display: block;
 		float: none;
 		max-width: 100%;
-		transform:none;
-		top:0;
+		transform: none;
+		top: 0;
 	}
 
 	body #well img {
-		display:block;
+		display: block;
 		float: none;
 		margin: 0 auto;
 		top: 0;
@@ -168,37 +168,37 @@ header img {
 		display: block;
 		float: none;
 		max-width: 100%;
-		transform:none;
-		top:0;
+		transform: none;
+		top: 0;
 	}
 }
 
 article h1 {
-	margin:0 auto;
+	margin: 0 auto;
 	display: block;
-	color: black;
+	color: #000;
 	text-align: center;
-	font-family: 'Lora', sans-serif;
+	font-family: 'Lora',sans-serif;
 	font-weight: 400;
 	font-size: 3em;
-	margin-top:30px;
+	margin-top: 30px;
 	font-style: italic;
 }
 
 #lives h1 {
-	color: rgba(60, 103, 175, 0.7);
+	color: rgba(60,103,175,0.7);
 }
 
 #money h1 {
-	color: rgba(0, 27, 99, 0.7);
+	color: rgba(0,27,99,0.7);
 }
 
 #well h1 {
-	color: rgba(0, 0, 48, 0.7);
+	color: rgba(0,0,48,0.7);
 }
 
 article {
-	height:400px;
+	height: 400px;
 }
 
 #lives img {
@@ -207,16 +207,16 @@ article {
 	height: auto;
 	float: right;
 	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #lives div {
-	float:left;
+	float: left;
 	display: inline-block;
 	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #money img {
@@ -225,8 +225,8 @@ article {
 	height: auto;
 	float: left;
 	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #money div {
@@ -243,8 +243,8 @@ article {
 	height: auto;
 	float: right;
 	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #well div {
@@ -258,8 +258,8 @@ article {
 article h3 {
 	display: block;
 	text-align: justify;
-	color: black;
-	font-family: 'Roboto', sans-serif;
+	color: #000;
+	font-family: 'Roboto',sans-serif;
 	font-weight: 300;
 	font-size: 1.25em;
 	width: 600px;
@@ -267,7 +267,7 @@ article h3 {
 	text-align-last: center;
 	padding-top: 30px;
 	line-height: 40px;
-	color: rgb(30, 58, 91);
+	color: #1e3a5b;
 }
 
 main {
@@ -276,23 +276,23 @@ main {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height:400px;
-	margin-top:100px;
+	height: 400px;
+	margin-top: 100px;
 }
 
 #overlay {
-	background-color: rgba(60, 103, 175, 0.5);
-	height:100%;
-	position:relative;
+	background-color: rgba(60,103,175,0.5);
+	height: 100%;
+	position: relative;
 }
 
 #overlay h1 {
 	font-size: 2.5em;
 	text-align: center;
 	display: block;
-	color: white;
-	/*line-height: 500px;*/
-	font-family: 'Lora', serif;
+	color: #fff;
+/*line-height: 500px;*/
+	font-family: 'Lora',serif;
 	font-weight: 400;
 	max-width: 90%;
 	margin: 0 auto;
@@ -300,10 +300,10 @@ main {
 
 #overlay h2 {
 	font-size: 1.3em;
-	padding-top:25px;
-	text-align:justify;
+	padding-top: 25px;
+	text-align: center;
 	line-height: 35px;
-	font-family: "Lato", sans-serif;
+	font-family: "Lato",sans-serif;
 	text-align-last: center;
 	color: #E6E6E6;
 	display: block;
@@ -314,54 +314,55 @@ main {
 
 .italic {
 	font-style: italic;
-	/*text-decoration: underline;*/
+/*text-decoration: underline;*/
 }
-
 
 #overlay div {
 	margin: 0 auto;
 	position: relative;
 	transform: translateY(-50%);
-	top:50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	top: 50%;
 	margin: 0 auto;
 	display: block;
-	float:none;
+	float: none;
 }
 
 #about {
 	max-width: 80%;
-	display:block;
+	display: block;
 	margin: 0 auto;
-	padding-top:35px;
+	padding-top: 35px;
 }
 
 hr {
 	border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	height: 0;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(255,255,255,0.3);
 	width: 90%;
 }
 
 #team {
-	background-color: rgba(229, 225, 238, 1);
+	background-color: rgba(229,225,238,1);
 	width: 100%;
 	height: auto;
 }
 
 #team h1 {
-	font-family: 'Lora', serif;
+	font-family: 'Lora',serif;
 	padding-top: 40px;
 	text-align: center;
-	color: rgb(28, 37, 51);
+	color: #1c2533;
 	font-size: 2em;
 }
 
 #team h2 {
-	font-family: 'Lato', serif;
+	font-family: 'Lato',serif;
 	line-height: 30px;
 	text-align: center;
-	color: rgb(28, 37, 51);
+	color: #1c2533;
 	font-size: 1.25em;
 	font-weight: 300;
 	padding-top: 30px;
@@ -377,28 +378,28 @@ hr {
 
 #people {
 	display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-	padding-bottom:50px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-bottom: 50px;
 }
 
 img {
 	border: none;
-  max-width: 100%;
-  height: 200px;
-  display: block;
+	max-width: 100%;
+	height: 200px;
+	display: block;
 }
 
 .person {
 	display: inline-block;
-  margin-bottom: 32px;
-  width: calc(100%);
+	margin-bottom: 32px;
+	width: calc(100%);
 }
 
 @media screen and (min-width: 50em) {
-  .person {
-    width: calc(25% - 30px);
-  }
+	.person {
+		width: calc(25% - 30px);
+	}
 
 	#team h1 {
 		padding-top: 70px;
@@ -406,28 +407,27 @@ img {
 }
 
 figure {
-  margin: 0;
-	z-index:
+	margin: 0;
 }
 
 img {
 	border: none;
-  max-width: 100%;
-  height: auto;
-  display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 	margin: 0 auto;
 }
 
 figcaption {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato',sans-serif;
 	font-weight: 300;
 	font-size: 1.25em;
-	padding-top:15px;
+	padding-top: 15px;
 	text-align: center;
-	color: rgb(28, 37, 51);
-	line-height:30px;
+	color: #1c2533;
+	line-height: 30px;
 	white-space: nowrap;
-	/*width: 110%;
+/*width: 110%;
 	margin: 0 auto;
 	display: block;*/
 	z-index: 100;
@@ -446,7 +446,6 @@ figcaption:first-line {
 
 footer {
 	width: 100%;
-
 }
 
 #contact {
@@ -456,70 +455,167 @@ footer {
 }
 
 #contact h1 {
-	font-family: 'Lora', serif;
+	font-family: 'Lora',serif;
 	padding-top: 70px;
 	text-align: center;
-	color: white;
+	color: #fff;
 	font-size: 2em;
 }
 
 #contact h2 {
-	font-family: 'Lato', serif;
+	font-family: 'Lato',serif;
 	line-height: 30px;
 	text-align: center;
-	color: white;
+	color: #fff;
 	font-size: 1.25em;
 	font-weight: 300;
 	padding-top: 30px;
 	padding-bottom: 20px;
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 
 /*FORMS*/
-#mc_embed_signup { border: none; text-align: center; width: 100%; } /* Signup form container */
+#mc_embed_signup {
+	border: none;
+	text-align: center;
+	width: 100%;
+}
 
-.mc-field-group { display: inline-block; } /* positions input field horizontally */
+/* Signup form container */
+.mc-field-group {
+	display: inline-block;
+}
 
-#mce-EMAIL { font-family: 'Lato', sans-serif; font-size: 1em; border: 2px solid white; color: rgb(23, 46, 74); background-color: #fff; padding: .7em 9em .7em 1em; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; display: inline-block; margin: 0; } /* Input Styles */
+/* positions input field horizontally */
+#mce-EMAIL {
+	font-family: 'Lato',sans-serif;
+	font-size: 1em;
+	border: 2px solid #fff;
+	color: #172e4a;
+	background-color: #fff;
+	padding: .7em 9em .7em 1em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	margin: 0;
+}
 
-.clear { display: inline-block; } /* positions button horizontally in line with input */
+/* Input Styles */
+.clear {
+	display: inline-block;
+}
 
-.button { font-family: 'Lato', sans-serif; font-size: 1em; color: rgb(28, 37, 51); background-color: rgb(229, 225, 238); padding: .7em 2em; border: 2px solid rgba(229, 225, 238, 1); -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; display: inline-block; margin: 0; } /* Button Styles */
+/* positions button horizontally in line with input */
+.button {
+	font-family: 'Lato',sans-serif;
+	font-size: 1em;
+	color: #1c2533;
+	background-color: #e5e1ee;
+	padding: .7em 2em;
+	border: 2px solid rgba(229,225,238,1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	margin: 0;
+}
 
-:-webkit-input-placeholder { color: #ABB0B2 ; } /* WebKit browsers */
-:-moz-placeholder { color: #ABB0B2 ; } /* Mozilla Firefox 4 to 18 */
-::-moz-placeholder { color: #ABB0B2 ; } /* Mozilla Firefox 19+ */
-:-ms-input-placeholder { color: #ABB0B2 ; } /* Internet Explorer 10+ */
+/* Button Styles */
+:-webkit-input-placeholder {
+	color: #ABB0B2;
+}
 
+/* WebKit browsers */
+:-moz-placeholder {
+	color:  #ABB0B2;
+}
+
+/* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {
+	color: #ABB0B2;
+}
+
+/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {
+	color: #ABB0B2;
+}
+
+/* Internet Explorer 10+ */
 .button:hover {
 	background-color: #B2AEBB;
 	border-color: #B2AEBB;
 	cursor: pointer;
-	transition: 0.5s ease-in-out;
+	transition: .5s ease-in-out;
 }
 
-@media (max-width: 768px) { /* positions input field and button underneath each other with 100% width for tablet and mobile */
+@media (max-width: 768px) {
+	/* positions input field and button underneath each other with 100% width for tablet and mobile */
+	.mc-field-group {
+		display: block;
+		max-width: 100%;
+	}
 
-.mc-field-group { display: block; max-width: 100%; }
-#mce-EMAIL { padding: .7em 0 .7em 1em; width: 96%; margin: 0; }
-.clear { display: block; width: 100% }
-.button { width: 100%; margin: .5em 0 0 0; }
+	#mce-EMAIL {
+		padding: .7em 0 .7em 1em;
+		width: 100%;
+		margin: 0;
+	}
 
+	.clear {
+		display: block;
+		width: 100%;
+	}
+
+	.button {
+		width: 100%;
+		margin: .5em 0 0;
+	}
 }
 
-:-webkit-input-placeholder { color: #ABB0B2 ; } /* WebKit browsers */
-:-moz-placeholder { color: #ABB0B2 ; } /* Mozilla Firefox 4 to 18 */
-::-moz-placeholder { color: #ABB0B2 ; } /* Mozilla Firefox 19+ */
-:-ms-input-placeholder { color: #ABB0B2 ; } /* Internet Explorer 10+ */
+:-webkit-input-placeholder {
+	color: #ABB0B2;
+}
 
-@media (max-width: 768px) { /* positions input field and button underneath each other with 100% width for tablet and mobile */
+/* WebKit browsers */
+:-moz-placeholder {
+	color:  #ABB0B2;
+}
 
-.mc-field-group { display: block; max-width: 100%; }
-#mce-EMAIL { padding: .7em 0 .7em 1em; width: 96%; margin: 0; }
-.clear { display: block; width: 100% }
-.button { width: 100%; margin: .5em 0 0 0; }
+/* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {
+	color: #ABB0B2;
+}
 
+/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {
+	color: #ABB0B2;
+}
+
+/* Internet Explorer 10+ */
+@media (max-width: 768px) {
+	/* positions input field and button underneath each other with 100% width for tablet and mobile */
+	.mc-field-group {
+		display: block;
+		max-width: 100%;
+	}
+
+	#mce-EMAIL {
+		padding: .7em 0 .7em 1em;
+		width: 96%;
+		margin: 0;
+	}
+
+	.clear {
+		display: block;
+		width: 100%;
+	}
+
+	.button {
+		width: 100%;
+		margin: .5em 0 0;
+	}
 }
 
 #formcontainer {
@@ -532,24 +628,26 @@ footer {
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 630px) {
 	header img {
-		margin:0 auto;
-		height:50px;
+		margin: 0 auto;
+		height: 50px;
 		width: 200px;
-		transform:none;
+		transform: none;
 		padding-top: 25px;
-		padding-left:0px;
-		left:50%;
+		padding-left: 0;
+		left: 50%;
 		transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
 	}
 
 	nav {
-    float: none;
+		float: none;
 		display: block;
-    text-align: center;
-  }
+		text-align: center;
+	}
 
 	a {
-		line-height:50px;
+		line-height: 50px;
 	}
 
 	header {
@@ -557,11 +655,11 @@ footer {
 	}
 
 	a:last-child {
-    padding-right: 0px;
-  }
+		padding-right: 0;
+	}
 
 	main {
-		margin-top:140px;
+		margin-top: 140px;
 		height: 300px;
 	}
 
@@ -571,7 +669,7 @@ footer {
 
 	#overlay h2 {
 		font-size: 3vw;
-		padding-top:15px;
+		padding-top: 15px;
 	}
 
 	div h1 {
@@ -580,7 +678,7 @@ footer {
 
 	div h3 {
 		font-size: 1em;
-		padding-top:25px;
+		padding-top: 25px;
 	}
 
 	#contact {
@@ -600,7 +698,7 @@ footer {
 
 @media only screen and (max-width: 550px) {
 	main {
-		height:250px;
+		height: 250px;
 	}
 
 	#overlay h2 {
@@ -608,13 +706,13 @@ footer {
 	}
 
 	#lives h1 {
-		/*line-height: 10px;*/
-		/*font-size: 1.1em;*/
+	/*line-height: 10px;*/
+	/*font-size: 1.1em;*/
 	}
 }
 
 @media only screen and (max-width: 775px) {
 	article h3 {
-		max-width:90%;
+		max-width: 90%;
 	}
 }
