@@ -583,7 +583,7 @@ footer {
 	}
 
 	article h3 {
-		width:90%;
+		max-width:90%;
 	}
 
 	article h3 {
@@ -592,7 +592,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
 	main {
 		height:250px;
 	}
@@ -601,8 +601,16 @@ footer {
 		line-height: 20px;
 	}
 
+	article
+
 	#lives h1 {
 		/*line-height: 10px;*/
 		/*font-size: 1.1em;*/
+	}
+}
+
+@media only screen and (max-width: 775) {
+	article h3 {
+		max-width:90%;
 	}
 }
