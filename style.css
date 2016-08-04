@@ -392,7 +392,7 @@ img {
 .person {
 	display: inline-block;
   margin-bottom: 32px;
-  width: calc(50% - 32px);
+  width: calc(100%);
 }
 
 @media screen and (min-width: 50em) {
@@ -415,6 +415,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+	margin: 0 auto;
 }
 
 figcaption {
@@ -605,8 +606,6 @@ footer {
 	#overlay h2 {
 		line-height: 20px;
 	}
-
-	article
 
 	#lives h1 {
 		/*line-height: 10px;*/
