@@ -582,8 +582,13 @@ footer {
 		padding-top:25px;
 	}
 
+	#contact {
+		height: 500px;
+	}
+
 	article h3 {
-		max-width:90%;
+		max-width: 90%;
+		text-align: center;
 	}
 
 	article h3 {
@@ -615,7 +620,7 @@ footer {
 	}
 }*/
 
-@media only screen
+/*@media only screen
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -626,4 +631,4 @@ footer {
 
 
 
-}
+}*/
