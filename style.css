@@ -209,6 +209,7 @@ article {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	max-height: 300px;
 }
 
 #lives div {
@@ -227,6 +228,7 @@ article {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	max-height: 300px;
 }
 
 #money div {
@@ -245,6 +247,7 @@ article {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	max-height: 300px;
 }
 
 #well div {
@@ -555,22 +558,32 @@ footer {
 	.mc-field-group {
 		display: block;
 		max-width: 100%;
+		margin: 0 auto;
 	}
 
-	#mce-EMAIL {
+	body #mce-EMAIL {
 		padding: .7em 0 .7em 1em;
-		width: 100%;
-		margin: 0;
+		width: 98%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
 	}
 
 	.clear {
 		display: block;
 		width: 100%;
+		width: 150%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.button {
-		width: 100%;
-		margin: .5em 0 0;
+	body .button {
+		width: 104%;
+		margin: .5em 0 0 0;
+		margin-left: auto;
+		margin-right: auto;
+
+		display: block;
 	}
 }
 
