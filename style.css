@@ -485,6 +485,10 @@ footer {
 	width: 100%;
 }
 
+body #contactemail {
+	padding-bottom: 50px;
+}
+
 /* Signup form container */
 .mc-field-group {
 	display: inline-block;
@@ -653,6 +657,10 @@ footer {
 		-webkit-transform: translateX(-50%);
 	}
 
+	body #contactemail {
+		padding-bottom: 0px;
+	}
+
 	nav {
 		float: none;
 		display: block;
@@ -695,7 +703,7 @@ footer {
 	}
 
 	#contact {
-		height: 500px;
+		height: 450px;
 	}
 
 	article h3 {
